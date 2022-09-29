@@ -41,6 +41,3 @@ Here's how to create a new controller form the Command line:
 
 More info on each folder and file in a Rails application:
 https://guides.rubyonrails.org/getting_started.html > see section 3.2
-
-To use the rails scaffold generator: (where Article is the name of the model)
-`rails generate scaffold Article title:string description:text`
