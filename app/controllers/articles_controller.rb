@@ -14,7 +14,12 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(params.require(:article).permit(:title, :description))
-    render plain: @article.inspect
+    @article.save
+    # The redirect can be written like this too:
+    # redirect_to article_path(@article)
+    # redirect_to article_path(@article[:id])
+    # But this, below, is the shortest form as it's very common operation
+    redirect_to @article
   end
 
 end
